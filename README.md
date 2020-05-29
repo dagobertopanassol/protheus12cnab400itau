@@ -1,4 +1,4 @@
-# protheus12cnab400itau
+# Totvs protheus12 cnab400 itau Fonte Download
 
 CNAB 400 ITAU PROTHEUS 12  COBRANÇA
 Download do Fonte e COMANDOs UTILIZADOs NO Desenvolvimento DO FONTE de Remessa - Usar o Menu do Formato antigo - CNAB A RECEBER - "Modelo 1 de 400 posicoes" o de 240 posicoes é Modelo 2.
