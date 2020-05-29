@@ -1,0 +1,65 @@
+TIPO REGISTRO  00100100                                                           
+OPERACAO       00200201                                                           
+3 TIPO         0030090REMESSA                                                     
+COD SERVICO    010011001                                                          
+SERVICO        0120260COBRANCA                                                    
+AGENCIA        0270300SUBSTR(SEE->EE_AGENCIA,1,4)                                 
+Z 2            031032000                                                          
+CONTA          0330370ALLTRIM(SEE->EE_CONTA)                                      
+DV CONTA       0380380ALLTRIM(SEE->EE_DVCTA)                                      
+BRANCO 8       0390460                                                            
+NOME EMPRESA   0470760SUBSTR(SM0->M0_NOMECOM,1,30)                                
+N BANCO        0770790341                                                         
+NOME BANCO     0800940BANCO ITAU SA                                               
+DATA GERACAO   0951000GRAVADATA(DDATABASE,.F.)                                    
+B 294          1013940                                                            
+SEQ REGISTRO   3954000000001                                                      
+TIPO REGISTRO  00100101                                                           
+TIPO INSCRICAO 002003002                                                          
+NUMERO CNPJ    0040170SUBSTR(SM0->M0_CGC,1,14)                                    
+AGENCIA        0180210ALLTRIM(SEE->EE_AGENCIA)                                    
+Z 2            022023000                                                          
+CONTA C        0240280ALLTRIM(SEE->EE_CONTA)                                      
+DAC            0290290ALLTRIM(SEE->EE_DVCTA)                                      
+B4             0300330                                                            
+INSTRUCAO      0340370                                                            
+TITULO EMPRESA 0380620SE1->E1_PREFIXO+SE1->E1_NUM+SE1->E1_PARCELA                 
+NOSSO NUMERO   0630700SUBSTR(SE1->E1_NUMBCO,1,7)                                  
+QTD MOEDA      0710830REPLICATE("0 ",13)                                          
+CATEIRA        0840860109                                                         
+USO BANCO      0871070                                                            
+COD CARTEIRA   1081080I                                                           
+OCORRENCIA     109110001                                                          
+N DOC COBRANCA 1111200SE1->E1_PREFIXO+SE1->E1_NUM+SE1->E1_PARCELA                 
+VENCIEMNTO     1211260GravaData(SE1->E1_VENCREA,.F.)'                             
+VALOR TIT      1271390STRZERO((ROUND(SE1->E1_VALOR,2)*100),13)                    
+N BANCO        1401420341                                                         
+AG COBRADORA   1431470ALLTRIM(SEE->EE_AGENCIA)                                    
+ESPECIE        148149002                                                          
+ACEITE         1501500N                                                           
+DT EMISSA TITUL1511560GravaData(SE1->E1_EMISSAO,.F.)                              
+INSTR 1 COBRANC157158009                                                          
+INST 2         1591600                                                            
+JUROS          1611730                                                            
+DESCONTO ATE   1741790                                                            
+VAL DESC       180192 REPLICATE("0",13)                                           
+VALOR IOF      1932050REPLICATE("0",13)                                           
+VAL ABATIM     2062180REPLICATE("0",13)                                           
+COD INSCR      219220002                                                          
+CNPJ           2212340SUBSTR(SM0->M0_CGC,1,14)                                    
+NOME PAGADOR   2352640 ALLTRIM(SA1->A1_NOME)                                      
+B 10           2652740                                                            
+RUA            2753140ALLTRIM(SA1->A1_END)                                        
+BAIRRO         3153260ALLTRIM(SA1->A1_BAIRRO)                                     
+CEP            3273340ALLTRIM(SA1->A1_CEP)                                        
+CIDADE         3353490ALLTRIM(SA1->A1_CIDADE)                                     
+UF             3503510ALLTRIM(SA1->A1_EST)                                        
+SACADOR        3523810SUBSTR(SM0->M0_NOMECOM,1,30)                                
+B 2            3823850                                                            
+VENC REAL DATA 3863910GravaData(SE1->E1_VENCREA,.F.)                              
+PRAZO          392393005                                                          
+B 1            3943940                                                            
+NUM SEQUENCIAL 3954000SUBSTR(SEE->EE_ULTDSK,1,6)                                  
+Codigo Registro0010010"9"                                                         
+Brancos        0023940                                                            
+Sequencia      3954000Incremental()                                               
